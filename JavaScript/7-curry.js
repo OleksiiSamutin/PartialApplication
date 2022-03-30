@@ -2,6 +2,7 @@
 
 const curry = (fn) => (...args) => {
   if (fn.length > args.length) {
+    console.log(args.length)
     const f = fn.bind(null, ...args);
     return curry(f);
   } else {
